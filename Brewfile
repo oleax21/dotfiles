@@ -3,6 +3,7 @@ tap "homebrew/cask"
 tap "homebrew/core"
 tap "sanemat/font"
 
+brew "starship"
 brew "ca-certificates"
 brew "readline", link: true
 brew "asdf"
