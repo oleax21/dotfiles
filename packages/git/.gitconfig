@@ -1,0 +1,29 @@
+[user]
+	name = shuhei
+	email = 72839906+oleax21@users.noreply.github.com
+[core]
+	editor = code --wait
+[alias]
+	ss = status
+	br = branch
+	brm = branch -m
+	brd = branch -d
+	brdd = branch -D
+	che = checkout
+	sw = switch
+	swc = switch -c
+	rs = restore
+	com = commit
+	comm = commit -m
+	mg = merge --no-ff
+	mgff = merge --ff
+	log1 = log -1
+	log2 = log -2
+	log3 = log -3
+	logone = log --oneline
+	logg = log --graph --pretty=format:'%C(auto)%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	firstcom = commit --allow-empty -m \"Initial commit\"
+[merge]
+	ff = false
+[pull]
+	rebase = true
