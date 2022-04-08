@@ -9,19 +9,19 @@
 	brm = branch -m
 	brd = branch -d
 	brdd = branch -D
-	che = checkout
+	ch = checkout
 	sw = switch
 	swc = switch -c
 	rs = restore
-	com = commit
-	comm = commit -m
+	cm = commit
+	cmm = commit -m
 	mg = merge --no-ff
 	mgff = merge --ff
-	log1 = log -1
-	log2 = log -2
-	log3 = log -3
-	logone = log --oneline
-	logg = log --graph --pretty=format:'%C(auto)%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	lg1 = log -1
+	lg2 = log -2
+	lg3 = log -3
+	lgone = log --oneline
+	lgg = log --graph --pretty=format:'%C(auto)%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	firstcom = commit --allow-empty -m \"Initial commit\"
 [merge]
 	ff = false
