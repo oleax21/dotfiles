@@ -4,7 +4,8 @@
 [core]
 	editor = code --wait
 [alias]
-	ss = status
+	ad = add
+	st = status
 	br = branch
 	brm = branch -m
 	brd = branch -d
@@ -12,11 +13,20 @@
 	ch = checkout
 	sw = switch
 	swc = switch -c
+	r = reset
 	rs = restore
+	rb = rebase
 	cm = commit
 	cmm = commit -m
+	p = push
+	f = fetch
 	mg = merge --no-ff
 	mgff = merge --ff
+	ss = stash
+	ssl = stash list
+	ssa = stash apply
+	ssd = stash drop
+	ssc = stash clear
 	lg1 = log -1
 	lg2 = log -2
 	lg3 = log -3
