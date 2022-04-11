@@ -23,8 +23,8 @@ else
 fi
 
 # Install Apps&CLIs with Brewfile
-  echo "******************** Installing Apps&CLIs with Brewfile ********************"
-  brew bundle -v --file "~/dotfiles/Brewfile"
+echo "******************** Installing Apps&CLIs with Brewfile ********************"
+brew bundle -v --file "~/dotfiles/Brewfile"
 
 # Add Symlink
 echo "******************** Ensure directory ********************"

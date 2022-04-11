@@ -1,15 +1,31 @@
-# Created by newuser for 5.7.1#
+###############################################
+#################### zshrc ####################
+###############################################
+# .zshenv -> .zprofile -> .zshrc
+# .zshenv   : login, interactive, shellscript
+# .zprofile : login
+# .zshrc    : login, interactive
+###############################################
+
 
 # -------------------------------------
-# ######### environment paths #########
+# ############### Paths ###############
 # -------------------------------------
 # Go
 export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin
+export PATH=$GOPATH/bin:$PATH
 # My scripts
 export PATH=$HOME/dotfiles/scripts:$PATH
 # asdf
 . /usr/local/opt/asdf/asdf.sh
+
+
+# -------------------------------------
+# ############## Aliases ##############
+# -------------------------------------
+alias g=git
+alias c=code
+alias ll='ls -al'
 
 
 # -------------------------------------
