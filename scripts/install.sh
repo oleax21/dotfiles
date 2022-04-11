@@ -4,6 +4,18 @@ set -e
 
 stow_path=~/dotfiles/packages
 
+# Functions
+
+check_dile() {
+  path="$1"
+  [ -f "$path" ]
+}
+
+check_dir() {
+  path="$1"
+  [ -f "$path" ]
+}
+
 # Homebrew Install
 if [ ! -f /usr/local/bin/brew ]; then
   cd ~
@@ -34,3 +46,34 @@ if [ ! -d ~/.config ]; then
 fi
 
 stow -v -d ~/dotfiles/packages -t ~ $(ls $stow_path)
+
+# asdf
+## .tool-versionsで指定したプラグインのインストール
+for plugin in awk $('{print $1}' ~/.tool-versions); do
+  if ! check_dir ~/.asdf/plugins/"$plugin"; then
+    asdf plugin add "$plugin"
+  fi
+done
+
+## .tool-versionsのVersionが更新されたか確認する関数
+check_runtime_versions_changed () {
+  plugin="$1"
+  specified=$(grep "$plugin" ~/.tool-versions | awk '{$1=""; print $0}')
+  installed=$(asdf list "$plugin" 2>&1)
+
+  check_changed=
+  for version in $specified; do
+    match=$(echo "$installed" | grep "$version")
+    [ -z "$match" ] && is_changed=1
+  done
+
+  [ "$check_changed" ]
+}
+
+## .tool-versionで指定したVersionのインストール
+for plugin in $(asdf plugin list); do
+  if check_runtime_versions_changed "$plugin"; then
+    echo "Install runtime: $plugin"
+    asdf install "$plugin"
+  fi
+done

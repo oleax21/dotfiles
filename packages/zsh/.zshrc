@@ -23,9 +23,12 @@ export PATH=$HOME/dotfiles/scripts:$PATH
 # -------------------------------------
 # ############## Aliases ##############
 # -------------------------------------
-alias g=git
-alias c=code
+# common
+alias g='git'
+alias c='code'
+alias cl='clear'
 alias ll='ls -al'
+alias ..='cd ..'
 
 
 # -------------------------------------
@@ -46,7 +49,7 @@ autoload -Uz _zinit
 ### End of Zinit's installer chunk
 
 # Pulugins
-zinit light zsh-users/zsh-autosuggestions # suggestion(補完)
+zinit light zsh-users/zsh-autosuggestions # suggestion(補完:過去に入力した文字を背景に薄く文字を表示してくれる)
 zinit light zdharma/fast-syntax-highlighting # シンタックスハイライト
 zinit light zdharma/history-search-multi-word # ctrl+r でコマンド履歴を検索
 
