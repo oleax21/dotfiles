@@ -7,3 +7,7 @@ error_symbol = "🤞"
 
 [package]
 disabled = true # Disable the package module, hiding it from the prompt completely
+
+[directory]
+truncation_length = 100
+truncate_to_repo = false
