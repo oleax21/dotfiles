@@ -5,6 +5,7 @@ tap "homebrew/core"
 tap "sanemat/font"
 
 brew "asdf"
+brew "cairo"
 brew "ca-certificates"
 brew "fontforge"
 brew "git"

@@ -27,9 +27,15 @@ export PATH=$HOME/dotfiles/scripts:$PATH
 alias g='git'
 alias c='code'
 alias cl='clear'
-alias ll='ls -al'
+alias ll='ls -l'
+alias la='ls -a'
+alias lla='ls -al'
 alias ..='cd ..'
 
+# chmod
+alias 644='chmod 644'
+alias 755='chmod 755'
+alias 777='chmod 777'
 
 # -------------------------------------
 # ############### Zinit ###############
