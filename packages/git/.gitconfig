@@ -38,3 +38,6 @@
 	ff = false
 [pull]
 	rebase = true
+	[ghq]
+	root = /Users/oleax21/dev/.go
+	root = /Users/oleax21/dev/.ghq

@@ -12,10 +12,11 @@
 # ############### Paths ###############
 # -------------------------------------
 # Go
-export GOPATH=$HOME/go
+export GOPATH=$HOME/dev/.go
 export PATH=$GOPATH/bin:$PATH
-# My scripts
-export PATH=$HOME/dotfiles/scripts:$PATH
+# My Paths
+export MYGIT_CLONE_PATH=$HOME/dev/.ghq/github.com/oleax21
+export PATH=$MYGIT_CLONE_PATH/dotfiles/scripts:$PATH
 # asdf
 . /usr/local/opt/asdf/asdf.sh
 
