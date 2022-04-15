@@ -16,6 +16,26 @@ is_dir() {
   [ -d "$path" ]
 }
 
+unlink_packages=
+for i in "$@"; do
+  case "$i" in
+    -s|--skip)
+      skip=1
+      shift ;;
+    -u=*|--unlink=*)
+      unlink_packages="${i#*=}"
+      shift ;;
+    *) ;;
+  esac
+done
+
+# unsymlink
+if [ -n "$unlink_packages" ]; then
+  echo "******************** Unlinking dotfiles... ********************"
+  stow -vD -d "$DOTFILES_PACKAGES_PATH" -t ~ "$unlink_packages"
+  exit
+fi
+
 # Homebrew Install
 if ! is_file /usr/local/bin/brew; then
   cd ~
@@ -35,9 +55,11 @@ else
 fi
 
 # Install Apps&CLIs with Brewfile
-# echo "******************** Installing Apps&CLIs with Brewfile... ********************"
-# cd ~
-# brew bundle -v --file "$MYGIT_CLONE_PATH"/dotfiles/Brewfile
+if [ ! "$skip" ]; then
+  echo "******************** Installing Apps&CLIs with Brewfile... ********************"
+  cd ~
+  brew bundle -v --file "$MYGIT_CLONE_PATH"/dotfiles/Brewfile
+fi
 
 # Add Symlink
 echo "*** Check directory ***"
@@ -55,7 +77,7 @@ stow -vd "$DOTFILES_PACKAGES_PATH" -t ~ $(ls $DOTFILES_PACKAGES_PATH)
 
 # asdf
 ## .tool-versionsで指定したプラグインのインストール
-for plugin in awk $('{print $1}' ~/.tool-versions); do
+for plugin in $(awk '{print $1}' ~/.tool-versions); do
   if ! is_dir ~/.asdf/plugins/"$plugin"; then
     asdf plugin add "$plugin"
   fi
