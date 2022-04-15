@@ -2,8 +2,8 @@
 
 set -e
 
-MYGIT_CLONE_PATH=~/dev/.ghq/github.com/oleax21
-DOTFILES_PACKAGES_PATH="$GIT_CLONE_PATH"/dotfiles/packages
+MYGIT_CLONE_PATH=~/dev/ghq/github.com/oleax21
+DOTFILES_PACKAGES_PATH="$MYGIT_CLONE_PATH"/dotfiles/packages
 
 # Functions
 is_file() {
@@ -17,7 +17,7 @@ is_dir() {
 }
 
 # Homebrew Install
-if ! is_dir /usr/local/bin/brew; then
+if ! is_file /usr/local/bin/brew; then
   cd ~
   echo "******************** Installing Homebrew... ********************"
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -35,9 +35,9 @@ else
 fi
 
 # Install Apps&CLIs with Brewfile
-echo "******************** Installing Apps&CLIs with Brewfile... ********************"
-cd ~
-brew bundle -v --file "$MYGIT_CLONE_PATH"/dotfiles/Brewfile
+# echo "******************** Installing Apps&CLIs with Brewfile... ********************"
+# cd ~
+# brew bundle -v --file "$MYGIT_CLONE_PATH"/dotfiles/Brewfile
 
 # Add Symlink
 echo "*** Check directory ***"
@@ -51,7 +51,7 @@ if ! is_dir ~/dev; then
   mkdir -p dev
 fi
 
-stow -vd  "$DOTFILES_PACKAGES_PATH" -t ~ $(ls $DOTFILES_PACKAGES_PATH)
+stow -vd "$DOTFILES_PACKAGES_PATH" -t ~ $(ls $DOTFILES_PACKAGES_PATH)
 
 # asdf
 ## .tool-versionsで指定したプラグインのインストール
