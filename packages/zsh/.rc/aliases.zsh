@@ -24,3 +24,4 @@ alias ghc='ghq create'
 
 # other
 alias cddot="cd $MYGIT_CLONE_PATH/dotfiles"
+alias cdrp="cd $MYGIT_CLONE_PATH"
