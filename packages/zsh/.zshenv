@@ -11,6 +11,9 @@
 # -------------------------------------
 # ################ Paths ##############
 # -------------------------------------
+# asdf
+. /usr/local/opt/asdf/asdf.sh
+export PATH=$(yarn global bin):$PATH
 # Go
 export GOPATH=$HOME/dev/go
 export PATH=$GOPATH/bin:$PATH
