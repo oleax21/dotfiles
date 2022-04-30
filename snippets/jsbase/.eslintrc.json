@@ -1,6 +1,0 @@
-{
-  "env": {},
-  "extends": ["eslint:recommended", "prettier"],
-  "parserOptions": {},
-  "rules": {}
-}
