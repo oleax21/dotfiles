@@ -23,6 +23,7 @@ brew "tree"
 brew "zsh"
 
 cask "alfred"
+cask "authy"
 #cask "brave-browser"
 #cask "cheatsheet"
 #cask "clipy"
