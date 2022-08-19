@@ -23,5 +23,6 @@ alias ghl='ghq list'
 alias ghc='ghq create'
 
 # other
+alias cdolea="cd $MYGIT_CLONE_PATH"
 alias cddot="cd $MYGIT_CLONE_PATH/dotfiles"
-alias cdrp="cd $MYGIT_CLONE_PATH"
+alias cdrp="cd $MYGIT_CLONE_PATH/.."
