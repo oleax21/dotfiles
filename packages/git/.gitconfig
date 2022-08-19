@@ -2,6 +2,7 @@
 	name = shuhei
 	email = 72839906+oleax21@users.noreply.github.com
 [core]
+	quotepath = false # 日本語ファイル名の文字化けを防ぐ
 	editor = code --wait
 [alias]
 	ad = add
@@ -37,7 +38,7 @@
 [merge]
 	ff = false
 [pull]
-	rebase = true
+	ff = only
 	[ghq]
 	root = /Users/oleax21/dev/go
 	root = /Users/oleax21/dev/ghq
