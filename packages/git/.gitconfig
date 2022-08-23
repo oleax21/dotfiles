@@ -39,6 +39,6 @@
 	ff = false
 [pull]
 	ff = only
-	[ghq]
+[ghq]
 	root = /Users/oleax21/dev/go
 	root = /Users/oleax21/dev/ghq
