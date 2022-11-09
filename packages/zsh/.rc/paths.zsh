@@ -3,9 +3,6 @@
 # -------------------------------------
 
 
-# openssl
-export PATH=/usr/local/opt/openssl@3/bin:$PATH
-
 # asdf
 . /usr/local/opt/asdf/asdf.sh
 export PATH=$(yarn global bin):$PATH
