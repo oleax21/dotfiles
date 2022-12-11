@@ -15,5 +15,8 @@ export PATH=$GOPATH/bin:$PATH
 export FZF_DEFAULT_COMMAND=
 export FZF_DEFAULT_OPTS=
 
+# GPG
+export GPG_TTY=$(tty)
+
 # My Paths
 export PATH=$MYGIT_CLONE_PATH/dotfiles/scripts:$PATH

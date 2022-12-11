@@ -1,6 +1,9 @@
 [user]
 	name = shuhei
-	email = 72839906+oleax21@users.noreply.github.com
+	email = hello@shuhei.world
+	signingkey = 7185BE360330FAE7!
+[commit]
+gpgsign = true
 [core]
 	quotepath = false # 日本語ファイル名の文字化けを防ぐ
 	editor = code --wait
