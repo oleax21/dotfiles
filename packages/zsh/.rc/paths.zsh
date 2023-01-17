@@ -12,6 +12,7 @@ export GOPATH=$HOME/dev/go
 export PATH=$GOPATH/bin:$PATH
 
 # fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND=
 export FZF_DEFAULT_OPTS=
 
