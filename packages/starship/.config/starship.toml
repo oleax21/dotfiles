@@ -1,9 +1,8 @@
+format = '$battery$time$memory_usage$line_break$all$line_break$character'
+
 add_newline = true # Inserts a blank line between shell prompts
 # scan_timeout = 10
 
-[character] # The name of the module we are configuring is "character"
-success_symbol = "🕊 "
-error_symbol = "🤞"
 
 [package]
 disabled = true # Disable the package module, hiding it from the prompt completely
@@ -11,3 +10,39 @@ disabled = true # Disable the package module, hiding it from the prompt complete
 [directory]
 truncation_length = 100
 truncate_to_repo = false
+
+[git_branch]
+format = '[$symbol$branch(:$remote_branch)]($style) '
+
+[nodejs]
+format = '[$symbol($version )]($style)'
+
+[battery]
+full_symbol = '🔋 '
+charging_symbol = '⚡️ '
+discharging_symbol = '💀 '
+
+[[battery.display]]
+threshold = 10
+style = 'bold red'
+
+[[battery.display]]
+threshold = 30
+style = 'bold yellow'
+
+[time]
+disabled = false
+format = '[$time]($style) '
+time_format = '%T'
+style = 'dimmed white'
+
+[memory_usage]
+disabled = false
+threshold = -1
+format = '$symbol[${ram} ${ram_pct}( | ${swap} ${swap_pct})]($style) '
+symbol = ''
+style = 'dimmed white'
+
+[character] # The name of the module we are configuring is "character"
+success_symbol = "🕊 "
+error_symbol = "🤞"
