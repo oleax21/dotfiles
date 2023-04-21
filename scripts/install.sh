@@ -2,7 +2,7 @@
 
 set -e
 
-MYGIT_CLONE_PATH=~/dev/ghq/github.com/oleax21
+MYGIT_CLONE_PATH=~/dev/ghq/github-oleax21/oleax21
 DOTFILES_PACKAGES_PATH="$MYGIT_CLONE_PATH"/dotfiles/packages
 
 # Functions
