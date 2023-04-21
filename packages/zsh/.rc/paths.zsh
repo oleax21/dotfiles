@@ -5,7 +5,7 @@
 
 # asdf
 . /usr/local/opt/asdf/libexec/asdf.sh
-export PATH=$(yarn global bin):$PATH
+export PATH="$(yarn global bin):$PATH"
 
 # Go
 export GOPATH=$HOME/dev/go

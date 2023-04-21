@@ -1,4 +1,4 @@
-format = '$battery$time$memory_usage$line_break$all$line_break$character'
+format = '$battery$time$memory_usage$line_break$all$line_break$character${custom.git_username}'
 
 add_newline = true # Inserts a blank line between shell prompts
 # scan_timeout = 10
@@ -46,3 +46,10 @@ style = 'dimmed white'
 [character] # The name of the module we are configuring is "character"
 success_symbol = "🕊 "
 error_symbol = "🤞"
+
+[custom.git_username]
+command = "git config --get --local user.name || git config --get --global user.name || echo 'Not in a git repository'"
+when = "git rev-parse HEAD 2> /dev/null"
+shell = "zsh"
+style = "green"
+format = "<[$output]($style)> "
