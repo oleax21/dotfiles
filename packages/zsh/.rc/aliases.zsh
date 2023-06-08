@@ -14,6 +14,8 @@ alias lla="ls -al"
 alias ..="cd .."
 
 # chmod
+alias 400="chmod 400"
+alias 600="chmod 600"
 alias 644="chmod 644"
 alias 755="chmod 755"
 alias 777="chmod 777"
