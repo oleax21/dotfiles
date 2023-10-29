@@ -39,5 +39,4 @@ gpgsign = true
 [pull]
 	ff = only
 [ghq]
-	root = /Users/oleax21/dev/go
 	root = /Users/oleax21/dev/ghq

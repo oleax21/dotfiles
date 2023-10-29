@@ -11,7 +11,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 export PATH="$(yarn global bin):$PATH"
 
 # Go
-# export GOPATH=$HOME/dev/go
+# export GOPATH=$HOME/.go
 # export PATH=$GOPATH/bin:$PATH
 
 # fzf
