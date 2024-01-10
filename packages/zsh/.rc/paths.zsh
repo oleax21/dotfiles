@@ -22,5 +22,8 @@ export PATH="$(yarn global bin):$PATH"
 # GPG
 export GPG_TTY=$(tty)
 
+# Foundly
+export PATH="$PATH:/Users/oleax21/.foundry/bin"
+
 # My Paths
 export PATH=$MYGIT_CLONE_PATH/dotfiles/scripts:$PATH
