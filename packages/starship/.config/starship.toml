@@ -47,12 +47,12 @@ style = 'dimmed white'
 success_symbol = '🕊 '
 error_symbol = '🤞'
 
-[custom.git_username]
-command = 'git config --get --local user.name || git config --get --global user.name || echo "Hey, who are you?"'
-when = 'git rev-parse HEAD 2> /dev/null'
-shell = 'zsh'
-style = 'green'
-format = '<[$output]($style)> '
+# [custom.git_username]
+# command = 'git config --get --local user.name || git config --get --global user.name || echo "Hey, who are you?"'
+# when = 'git rev-parse HEAD 2> /dev/null'
+# shell = 'zsh'
+# style = 'green'
+# format = '<[$output]($style)> '
 
 [custom.global_ip]
 command = 'curl -s ifconfig.me; echo'
