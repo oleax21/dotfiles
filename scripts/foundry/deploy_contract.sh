@@ -14,17 +14,17 @@
 
 # check command format
 if [ "$#" -lt 2 ]; then
-      echo "Usage: deploy_contract <file_path> <contract_name> [-l] [-v] [-f] [-c]"
-      return 1
+  echo "Usage: deploy_contract <file_path> <contract_name> [-l] [-v] [-f] [-c]"
+  return 1
 fi
 
 # read environment variable from .env
 env_file=".env"
 if [ -f "$env_file" ]; then
-      export $(grep -v '^#' $env_file | xargs)
+  export $(grep -v '^#' $env_file | xargs)
 else
-      echo ".env file not found"
-      return 1
+  echo ".env file not found"
+  return 1
 fi
 
 file_path=$1
@@ -34,17 +34,17 @@ verify_flag=""
 ffi_flag=""
 
 # change rpc_url if local flag is set
-if [[ "$3" == "-l" ]]; then
-      rpc_url="http://localhost:8545"
+if [[ "$3" == "-l" ]] || [[ "$4" == "-l" ]] || [[ "$5" == "-l" ]] || [[ "$6" == "-l" ]]; then
+  rpc_url="http://localhost:8545"
 fi
 
 # change verify_flag if verify flag is set
-if [[ "$3" == "-v" ]] || [[ "$4" == "-v" ]]; then
+if [[ "$3" == "-v" ]] || [[ "$4" == "-v" ]] || [[ "$5" == "-v" ]] || [[ "$6" == "-v" ]]; then
   verify_flag="--verify"
 fi
 
 # enable ffi if ffi flag is set
-if [[ "$3" == "-f" ]] || [[ "$4" == "-f" ]] || [[ "$5" == "-f" ]]; then
+if [[ "$3" == "-f" ]] || [[ "$4" == "-f" ]] || [[ "$5" == "-f" ]] || [[ "$6" == "-f" ]]; then
   ffi_flag="--ffi"
 fi
 
