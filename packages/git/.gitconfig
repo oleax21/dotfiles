@@ -1,5 +1,8 @@
+[user]
+	name = "me"
+	email = "me"
 [commit]
-gpgsign = true
+	gpgsign = true
 [core]
 	quotepath = false # 日本語ファイル名の文字化けを防ぐ
 	editor = code --wait
