@@ -1,4 +1,4 @@
 python 3.11.3
-poetry 1.5.1
+poetry 1.8.0
 nodejs 20.11.1
 yarn 1.22.19
