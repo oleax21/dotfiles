@@ -5,9 +5,8 @@
 
 # common
 alias g="git"
-alias c="code"
-alias cu="cursor"
-alias cbeta="code-insiders"
+alias c="cursor"
+alias codebeta="code-insiders"
 alias cl="clear"
 alias ll="ls -l"
 alias la="ls -a"
