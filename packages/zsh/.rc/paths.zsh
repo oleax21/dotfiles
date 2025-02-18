@@ -7,7 +7,10 @@
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # asdf
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
+export ASDF_DATA_DIR="/Users/oleax21/.asdf"
+export PATH="$ASDF_DATA_DIR/shims:$PATH"
+
+# yarn
 export PATH="$(yarn global bin):$PATH"
 
 # Go
